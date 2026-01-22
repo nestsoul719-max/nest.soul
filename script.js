@@ -5,13 +5,12 @@ function sendMessage() {
   const text = userInput.value.trim();
   if (text === "") return;
 
-  // User message
   addMessage(text, "user");
   userInput.value = "";
 
-  // Fake AI typing delay
+  // typing indicator
   setTimeout(() => {
-    addMessage(getBotReply(), "bot");
+    addMessage(getAIReply(text), "bot");
   }, 800);
 }
 
@@ -23,18 +22,19 @@ function addMessage(text, sender) {
   chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-function getBotReply() {
+function getAIReply(userText) {
   const replies = [
-    "I'm here with you 🌙",
-    "Tell me more, I'm listening 💙",
-    "That sounds heavy. You don't have to go through it alone.",
-    "It's okay to feel this way 🫂",
-    "Take your time. I'm right here."
+    "I'm here 🌙 tell me more.",
+    "That sounds heavy… I'm listening 💙",
+    "You don’t have to face this alone.",
+    "Hmm… I feel you 🫂",
+    "Take a deep breath, I'm right here."
   ];
+
   return replies[Math.floor(Math.random() * replies.length)];
 }
 
-// Enter key support
+/* Enter key support */
 userInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     sendMessage();
