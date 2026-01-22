@@ -4,10 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soul.Nest 🌙</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="root"></div>
-<body>
-  <div id="root"></div>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      🌙 Soul.Nest
+    </div>
+
+    <div id="chat-box" class="chat-box">
+      <!-- messages will come here -->
+    </div>
+
+    <div class="chat-input">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Type your feelings here..."
+      />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
+</html>
