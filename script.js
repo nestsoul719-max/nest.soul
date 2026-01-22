@@ -126,7 +126,8 @@ typing.innerHTML = `
     typing.remove();
     const botMsg = document.createElement("div");
     botMsg.className = "bot-msg";
-    botMsg.innerText = getReply(userText);
+    const reply = getReply(userText);
+typeText(botMsg, reply);
     chatBox.appendChild(botMsg);
     chatBox.scrollTop = chatBox.scrollHeight;
   }, 900);
