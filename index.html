@@ -2,33 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>soul.nest 🌙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soul.Nest 🌙</title>
+
+  <!-- CSS LINK -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-...
-  <script src="script.js"></script>
-</body>
+
   <div class="chat-container">
-    <div class="chat-header">
-      🌙 Soul.Nest
-    </div>
+    <h2 class="title">soul.nest 🌙</h2>
 
-    <div id="chat-box" class="chat-box">
-      <!-- messages will come here -->
-    </div>
+    <!-- CHAT BOX -->
+    <div id="chat-box" class="chat-box"></div>
 
-    <div class="chat-input">
+    <!-- INPUT AREA -->
+    <div class="input-area">
       <input
         type="text"
         id="user-input"
-        placeholder="Type your feelings here..."
+        placeholder="Type your message..."
       />
       <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
+  <!-- JS LINK (MUST BE LAST) -->
   <script src="script.js"></script>
+
 </body>
 </html>
