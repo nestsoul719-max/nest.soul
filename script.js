@@ -100,7 +100,13 @@ function sendMessage() {
   const chatBox = document.getElementById("chatBox");
 
   if (!input.value.trim()) return;
-
+typing.innerHTML = `
+  <span class="typing">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+`;
   // user message
   const userMsg = document.createElement("div");
   userMsg.className = "user-msg";
@@ -113,7 +119,7 @@ function sendMessage() {
   // typing indicator
   const typing = document.createElement("div");
   typing.className = "bot-msg";
-  typing.innerText = "typing...";
+  
   chatBox.appendChild(typing);
 
   setTimeout(() => {
