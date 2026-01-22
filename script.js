@@ -131,3 +131,16 @@ typing.innerHTML = `
     chatBox.scrollTop = chatBox.scrollHeight;
   }, 900);
 }
+function typeText(element, text, speed = 25) {
+  let index = 0;
+  element.innerText = "";
+
+  const interval = setInterval(() => {
+    if (index < text.length) {
+      element.innerText += text.charAt(index);
+      index++;
+    } else {
+      clearInterval(interval);
+    }
+  }, speed);
+}
